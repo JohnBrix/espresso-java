@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.ui.espresso.MainActivity">
+
+    <EditText
+        android:id="@+id/edFname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/edLname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/edMname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Middle Name"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edMname"
+        android:layout_margin="40dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:textStyle="bold"
+        android:textSize="35dp"/>
+
+</LinearLayout>
