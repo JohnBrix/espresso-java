@@ -1,17 +1,13 @@
 package com.ui.espresso;
 
-import android.content.Intent;
-
+import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.Espresso;
 import androidx.test.espresso.intent.Intents;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.rule.ActivityTestRule;
 
 import com.ui.espresso.view.Dashboard;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,8 +16,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.intent.Intents.intended;
-import static androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
@@ -32,21 +26,9 @@ public class MainActivityTest {
     public ActivityScenarioRule<MainActivity> activityRule =
             new ActivityScenarioRule<>(MainActivity.class);
 
-    /*Intent purpose to open*/
-    @Rule
-    public ActivityTestRule<Dashboard> activityRule2 = new ActivityTestRule<>(Dashboard.class, true, false);
-
-
-
-    /*THIS IS DEPRECATED*/
-    /*@Rule
-    public IntentsTestRule<MainActivity> intentsTestRule =
-            new IntentsTestRule<>(MainActivity.class);*/
-
     private static String FIRST_NAME = "John Brix";
     private static String LAST_NAME = "Pomoy";
     private static String MIDDLE_NAME = "Akira";
-
 
 
     @Test
@@ -94,8 +76,7 @@ public class MainActivityTest {
 
         /*Init*/
         Intents.init();
-        activityRule2.launchActivity(new Intent());
-        intended(hasComponent(Dashboard.class.getName()));
+        ActivityScenario.launch(Dashboard.class);
         Intents.release(); /*End Intent*/
     }
 

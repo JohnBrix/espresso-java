@@ -1,13 +1,12 @@
 package com.ui.espresso.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ui.espresso.R;
 
@@ -35,7 +34,7 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println(dash.getText() + " " + msg.getText() + " " + name.getText());
-                    txView.setText(dash.getText() + " " + msg.getText() + " " + name.getText());
+                txView.setText(dash.getText() + " " + msg.getText() + " " + name.getText());
 
             }
         });
