@@ -8,22 +8,19 @@
     tools:context="com.ui.espresso.MainActivity">
 
     <EditText
-        android:id="@+id/edfName"
+        android:id="@+id/dash"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="First Name"/>
+        android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/edlName"
+        android:id="@+id/msg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Last Name"/>
+        android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/edMname"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Middle Name"/>
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btn"
@@ -39,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn"
         android:textStyle="bold"
-        android:textSize="35dp"/>
+        android:textSize="35dp"
+        android:gravity="center"/>
 
 </LinearLayout>
